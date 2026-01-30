@@ -13,12 +13,17 @@
             --muted: #b8b1a5;
             --accent: #f2c46d;
         }
+        html {
+            min-height: 100%;
+            background: radial-gradient(circle at 10% 20%, #262a38, #090a0d 55%);
+        }
         body {
             margin: 0;
             font-family: "SF Pro Display", "Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
             background: radial-gradient(circle at 10% 20%, #262a38, #090a0d 55%);
             color: var(--text);
             line-height: 1.6;
+            min-height: 100vh;
         }
         header {
             padding: 48px 24px;
