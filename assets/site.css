@@ -201,9 +201,10 @@ a:hover { color: var(--text); }
     font-size: clamp(2.6rem, 6.4vw, 5rem);
     line-height: 1.02;
     letter-spacing: -0.035em;
-    margin: 18px 0 20px;
+    margin: 0 0 20px;
     font-weight: 800;
 }
+.hero h1 .kicker { display: flex; width: fit-content; margin: 0 0 22px; line-height: 1.4; font-weight: 400; }
 .hero h1 .gold {
     background: linear-gradient(100deg, var(--gold-soft), var(--gold) 60%, #c47d1c);
     -webkit-background-clip: text;
@@ -333,6 +334,7 @@ a:hover { color: var(--text); }
 @media (max-width: 900px) {
     .hero .wrap { grid-template-columns: 1fr; }
     .hero .copy { text-align: center; }
+    .hero h1 .kicker { margin-left: auto; margin-right: auto; }
     .hero .lede { margin-left: auto; margin-right: auto; }
     .cta-row { justify-content: center; }
     .stage { max-width: 620px; width: 100%; margin: 0 auto; }
@@ -466,6 +468,34 @@ h2 {
     .feature.flip .media { order: 0; }
     .feature .copy { text-align: left; }
 }
+
+/* ---------- Map Conditions catalog ---------- */
+.catalog {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: clamp(28px, 5vw, 64px);
+}
+.catalog h3 {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 16px;
+}
+.chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li {
+    padding: 8px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--line-strong);
+    background: rgba(20,24,36,.6);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+.chips.maps li { border-color: rgba(224,164,58,.35); background: rgba(224,164,58,.06); }
+.catalog .note { color: var(--muted); font-size: 0.9rem; margin: 16px 0 0; }
+@media (max-width: 760px) { .catalog { grid-template-columns: 1fr; } }
 
 /* ---------- Devices band ---------- */
 .devices {

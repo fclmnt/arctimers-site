@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#0b0d12" />
-    <title>ArcTimers: ARC Raiders event timers and raid alerts</title>
-    <meta name="description" content="See every ARC Raiders Map Condition live Topside, and get an alert 15, 10 or 5 minutes before the raids you care about. Free for iPhone and iPad." />
+    <title>ARC Raiders Event Timer &amp; Map Condition Alerts | ArcTimers</title>
+    <meta name="description" content="Live ARC Raiders event timer for iPhone and iPad. See every Map Condition, like Matriarch and Night Raid, on every map, and get alerts before they start." />
     <link rel="canonical" href="https://arctimers.com/" />
     <link rel="alternate" hreflang="en" href="https://arctimers.com/" />
     <link rel="alternate" hreflang="fr" href="https://arctimers.com/fr/" />
@@ -24,18 +24,118 @@
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
     <link rel="stylesheet" href="assets/site.css" />
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "ArcTimers: Live Raid Alerts",
-        "operatingSystem": "iOS 26 or later",
-        "applicationCategory": "UtilitiesApplication",
-        "url": "https://arctimers.com/",
-        "downloadUrl": "https://apps.apple.com/app/id6758253513",
-        "image": "https://arctimers.com/assets/img/icon.png",
-        "inLanguage": ["en", "fr"],
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-    }
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://arctimers.com/#website",
+            "url": "https://arctimers.com/",
+            "name": "ArcTimers",
+            "inLanguage": "en"
+        },
+        {
+            "@type": "MobileApplication",
+            "@id": "https://arctimers.com/#app",
+            "name": "ArcTimers: Live Raid Alerts",
+            "alternateName": [
+                "ArcTimers",
+                "ARC Raiders event timer"
+            ],
+            "description": "Live ARC Raiders event timer and Map Condition tracker with alerts before Matriarch, Night Raid, Harvester and every other event.",
+            "operatingSystem": "iOS 26, iPadOS 26",
+            "applicationCategory": "UtilitiesApplication",
+            "url": "https://arctimers.com/",
+            "downloadUrl": "https://apps.apple.com/app/id6758253513",
+            "installUrl": "https://apps.apple.com/app/id6758253513",
+            "image": "https://arctimers.com/assets/img/icon.png",
+            "screenshot": "https://arctimers.com/assets/img/en-iphone-01-timeline.png",
+            "inLanguage": [
+                "en",
+                "fr"
+            ],
+            "about": {
+                "@type": "VideoGame",
+                "name": "ARC Raiders",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Embark Studios"
+                }
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Franck Clement"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://arctimers.com/#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Is ArcTimers made by Embark Studios?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. ArcTimers is an unofficial ARC Raiders (ArcRaiders) companion app and event tracker made by players. It is not affiliated with Embark Studios. ARC Raiders is a trademark of Embark Studios AB."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "When is the next Matriarch or Night Raid in ARC Raiders?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Map Conditions rotate across the maps on a schedule, and each one lasts an hour. Open ArcTimers to see when the next Matriarch, Night Raid, Harvester or Electromagnetic Storm starts and on which map, with a live countdown. Tap the bell and you get a notification when it begins."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does it cover Pendola Pass and Frozen Trail?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Pendola Pass, the map that opens with the Frozen Trail update, is tracked like every other map: Dam Battlegrounds, Buried City, Spaceport, The Blue Gate, Stella Montis and Riven Tides."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Where does the schedule come from?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "From MetaForge's community ARC Raiders data (metaforge.app). The app refreshes when you open it, when you pull to refresh, and in the background so your notifications stay on time."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do I need an account?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. There's no sign-up, no ads, no analytics and no third-party SDKs. Your tracked events and custom alerts stay on your device. The Privacy Policy has the details."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Which devices are supported?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "iPhone and iPad running iOS or iPadOS 26 or later. The app is in English and French."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I get in touch?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Email arctimers@gmail.com. Feedback and ideas are welcome."
+                    }
+                }
+            ]
+        }
+    ]
+}
     </script>
     <script defer src="assets/site.js"></script>
 </head>
@@ -62,8 +162,7 @@
         <section class="hero">
             <div class="wrap">
                 <div class="copy">
-                    <span class="kicker"><span class="live-dot" aria-hidden="true"></span>ARC Raiders companion · iPhone &amp; iPad</span>
-                    <h1>Never miss a <span class="gold">Matriarch</span> again.</h1>
+                    <h1><span class="kicker"><span class="live-dot" aria-hidden="true"></span>ARC Raiders event timer</span> Never miss a <span class="gold">Matriarch</span> again.</h1>
                     <p class="lede">See every Map Condition live Topside, and get pinged 15, 10 or 5 minutes before the raids you care about.</p>
                     <div class="cta-row">
                         <a class="appstore" href="https://apps.apple.com/app/apple-store/id6758253513?pt=120827598&amp;ct=website-hero&amp;mt=8" aria-label="Download ArcTimers on the App Store">
@@ -118,7 +217,7 @@
                     <div class="media reveal">
                         <picture>
                             <source type="image/avif" srcset="assets/img/en-iphone-01-timeline.avif" />
-                            <img class="phone" src="assets/img/en-iphone-01-timeline.png" width="760" height="1554" loading="lazy" decoding="async" alt="The Timeline on iPhone: Night Raid, Husk Graveyard and Lush Blooms active now with countdowns, and the conditions coming up at 8 PM." />
+                            <img class="phone" src="assets/img/en-iphone-01-timeline.png" width="760" height="1554" loading="lazy" decoding="async" alt="ArcTimers Timeline for ARC Raiders on iPhone: Night Raid, Husk Graveyard and Lush Blooms active now with countdowns, and the conditions coming up at 8 PM." />
                         </picture>
                     </div>
                     <div class="copy reveal">
@@ -182,6 +281,52 @@
             </div>
         </section>
 
+        <section class="section conditions" aria-labelledby="conditions-title">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="kicker"><b>Map Conditions</b><span class="dash"></span>Maps</span>
+                    <h2 id="conditions-title">Every ARC Raiders Map Condition, on every map.</h2>
+                    <p>ArcTimers tracks the full ARC Raiders event schedule. Each Map Condition runs for one hour on one map, and the app shows when the next one starts, where, and alerts you before it does.</p>
+                </div>
+                <div class="catalog reveal">
+                    <div>
+                        <h3>Map Conditions</h3>
+                        <ul class="chips">
+                            <li>Matriarch</li>
+                            <li>Night Raid</li>
+                            <li>Harvester</li>
+                            <li>Electromagnetic Storm</li>
+                            <li>Hurricane</li>
+                            <li>Cold Snap</li>
+                            <li>Husk Graveyard</li>
+                            <li>Lush Blooms</li>
+                            <li>Bird City</li>
+                            <li>Beachcombing</li>
+                            <li>Close Scrutiny</li>
+                            <li>Hidden Bunker</li>
+                            <li>Launch Tower Loot</li>
+                            <li>Locked Gate</li>
+                            <li>Prospecting Probes</li>
+                            <li>Uncovered Caches</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Maps</h3>
+                        <ul class="chips maps">
+                            <li>Dam Battlegrounds</li>
+                            <li>Buried City</li>
+                            <li>Spaceport</li>
+                            <li>The Blue Gate</li>
+                            <li>Stella Montis</li>
+                            <li>Riven Tides</li>
+                            <li>Pendola Pass</li>
+                        </ul>
+                        <p class="note">Including Pendola Pass, the new map from the Frozen Trail update.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section" aria-labelledby="devices-title">
             <div class="wrap">
                 <div class="section-head center reveal">
@@ -193,7 +338,7 @@
                     <figure>
                         <picture>
                             <source type="image/avif" srcset="assets/img/en-ipad-01-timeline.avif" />
-                            <img src="assets/img/en-ipad-01-timeline.png" width="1400" height="1826" loading="lazy" decoding="async" alt="The Timeline on iPad, showing three active conditions and the schedule for the next eight hours." />
+                            <img src="assets/img/en-ipad-01-timeline.png" width="1400" height="1826" loading="lazy" decoding="async" alt="ArcTimers on iPad, the ARC Raiders event schedule, showing three active conditions and the schedule for the next eight hours." />
                         </picture>
                         <figcaption>iPad</figcaption>
                     </figure>
@@ -259,7 +404,15 @@
                 <div class="faq reveal">
                     <details>
                         <summary>Is ArcTimers made by Embark Studios?</summary>
-                        <p>No. ArcTimers is an unofficial companion app made by ARC Raiders players. It is not affiliated with Embark Studios. ARC Raiders is a trademark of Embark Studios AB.</p>
+                        <p>No. ArcTimers is an unofficial ARC Raiders (ArcRaiders) companion app and event tracker made by players. It is not affiliated with Embark Studios. ARC Raiders is a trademark of Embark Studios AB.</p>
+                    </details>
+                    <details>
+                        <summary>When is the next Matriarch or Night Raid in ARC Raiders?</summary>
+                        <p>Map Conditions rotate across the maps on a schedule, and each one lasts an hour. Open ArcTimers to see when the next Matriarch, Night Raid, Harvester or Electromagnetic Storm starts and on which map, with a live countdown. Tap the bell and you get a notification when it begins.</p>
+                    </details>
+                    <details>
+                        <summary>Does it cover Pendola Pass and Frozen Trail?</summary>
+                        <p>Yes. Pendola Pass, the map that opens with the Frozen Trail update, is tracked like every other map: Dam Battlegrounds, Buried City, Spaceport, The Blue Gate, Stella Montis and Riven Tides.</p>
                     </details>
                     <details>
                         <summary>Where does the schedule come from?</summary>
