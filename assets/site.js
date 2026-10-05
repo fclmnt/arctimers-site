@@ -41,35 +41,4 @@
             }, 1000);
         }
     }
-
-    // App preview: plays while on screen, with a pause button.
-    const video = document.querySelector(".video-frame video");
-    const toggle = document.querySelector(".video-toggle");
-    if (video && toggle) {
-        let userPaused = reduceMotion;
-        const setPressed = () => toggle.setAttribute("aria-pressed", String(!video.paused));
-        video.addEventListener("play", setPressed);
-        video.addEventListener("pause", setPressed);
-        toggle.addEventListener("click", () => {
-            if (video.paused) {
-                userPaused = false;
-                video.play().catch(() => {});
-            } else {
-                userPaused = true;
-                video.pause();
-            }
-        });
-        if ("IntersectionObserver" in window) {
-            new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting && !userPaused) {
-                        video.play().catch(() => {});
-                    } else if (!entry.isIntersecting) {
-                        video.pause();
-                    }
-                });
-            }, { threshold: 0.35 }).observe(video);
-        }
-        setPressed();
-    }
 })();
