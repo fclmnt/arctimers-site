@@ -1,343 +1,337 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#090a0d" />
-    <title>ArcTimers Conditions & Confidentialité</title>
-    <link rel="alternate" hreflang="en" href="https://fclmnt.github.io/arctimers-site/" />
-    <link rel="alternate" hreflang="fr" href="https://fclmnt.github.io/arctimers-site/fr/" />
-    <style>
-        :root {
-            color-scheme: dark;
-            --bg: #080808;
-            --card: #111319;
-            --text: #f4f0e4;
-            --muted: #b8b1a5;
-            --accent: #f2c46d;
-        }
-        html {
-            min-height: 100%;
-            background: radial-gradient(circle at 10% 20%, #262a38, #090a0d 55%);
-        }
-        body {
-            margin: 0;
-            font-family: "SF Pro Display", "Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-            background: radial-gradient(circle at 10% 20%, #262a38, #090a0d 55%);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        header {
-            padding: 48px 24px 24px;
-            text-align: center;
-        }
-        header h1 {
-            margin-bottom: 8px;
-            font-size: clamp(2rem, 4vw, 3rem);
-            line-height: 1.2;
-        }
-        header p {
-            color: var(--muted);
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px 20px;
-            margin-top: 20px;
-        }
-        main {
-            max-width: 840px;
-            margin: 0 auto 80px;
-            padding: 0 24px 48px;
-        }
-        .part-title {
-            margin: 48px 0 20px;
-            font-size: clamp(1.6rem, 3vw, 2.2rem);
-            scroll-margin-top: 24px;
-        }
-        section {
-            background: rgba(9, 10, 13, 0.75);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 18px;
-            padding: 28px;
-            margin-bottom: 20px;
-            backdrop-filter: blur(10px);
-            overflow-wrap: break-word;
-        }
-        h2 {
-            margin-top: 0;
-            color: var(--accent);
-        }
-        h3 {
-            margin-bottom: 4px;
-        }
-        a {
-            color: var(--accent);
-        }
-        li + li {
-            margin-top: 6px;
-        }
-        .summary {
-            border-color: rgba(242, 196, 109, 0.35);
-        }
-        .muted {
-            color: var(--muted);
-        }
-        @media (max-width: 520px) {
-            main {
-                padding: 0 16px 40px;
-            }
-            section {
-                padding: 20px;
-            }
-        }
-    </style>
+    <meta name="theme-color" content="#0b0d12" />
+    <title>ArcTimers : horaires des événements et alertes de raid ARC Raiders</title>
+    <meta name="description" content="Suivez en direct chaque Map Condition d’ARC Raiders Topside et recevez une alerte 15, 10 ou 5 minutes avant les raids qui vous intéressent. Gratuit sur iPhone et iPad." />
+    <link rel="canonical" href="https://arctimers.com/fr/" />
+    <link rel="alternate" hreflang="en" href="https://arctimers.com/" />
+    <link rel="alternate" hreflang="fr" href="https://arctimers.com/fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://arctimers.com/" />
+    <meta name="apple-itunes-app" content="app-id=6758253513" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ArcTimers" />
+    <meta property="og:title" content="ArcTimers : ne ratez plus jamais une Matriarche" />
+    <meta property="og:description" content="Les Map Conditions d’ARC Raiders en direct, et une alerte avant vos raids. Gratuit sur iPhone et iPad." />
+    <meta property="og:url" content="https://arctimers.com/fr/" />
+    <meta property="og:image" content="https://arctimers.com/assets/img/og-fr.jpg" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../assets/site.css" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "ArcTimers: Live Raid Alerts",
+        "operatingSystem": "iOS 26 ou version ultérieure",
+        "applicationCategory": "UtilitiesApplication",
+        "url": "https://arctimers.com/fr/",
+        "downloadUrl": "https://apps.apple.com/app/id6758253513",
+        "image": "https://arctimers.com/assets/img/icon.png",
+        "inLanguage": ["en", "fr"],
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script defer src="../assets/site.js"></script>
 </head>
 <body>
-    <header>
-        <h1>ArcTimers : conditions d’utilisation et politique de confidentialité</h1>
-        <p>Dernière mise à jour : 28 septembre 2026</p>
-        <nav>
-            <a href="#conditions">Conditions d’utilisation</a>
-            <a href="#confidentialite">Politique de confidentialité</a>
-            <a href="#contact">Contact</a>
-            <a href="../" hreflang="en" lang="en">English version</a>
-        </nav>
+    <a class="skip" href="#main">Aller au contenu</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="./" aria-label="Accueil ArcTimers">
+                <img src="../assets/img/icon.png" alt="" width="32" height="32" />
+                ArcTimers
+            </a>
+            <nav class="site-nav" aria-label="Principal">
+                <a href="#features">Fonctionnalités</a>
+                <a href="#preview">Aperçu</a>
+                <a href="#pro">Pro</a>
+                <a href="#faq">FAQ</a>
+                <a class="lang" href="../" hreflang="en" lang="en">EN</a>
+            </nav>
+            <a class="btn btn-gold" href="https://apps.apple.com/app/apple-store/id6758253513?pt=120827598&amp;ct=website-header&amp;mt=8">Télécharger</a>
+        </div>
     </header>
-    <main>
-        <h2 class="part-title" id="conditions">Conditions d’utilisation</h2>
 
-        <section>
-            <h2>1. À propos de ces conditions</h2>
-            <p>ArcTimers (l’« application ») est publiée par Franck Clement, développeur indépendant établi au Canada (« nous »). Les présentes conditions d’utilisation s’appliquent à l’application ArcTimers pour iPhone et iPad ainsi qu’à ArcTimers Pro.</p>
-            <p>Votre utilisation de l’application est également régie par le <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Contrat de licence d’utilisateur final des applications sous licence</a> d’Apple (le « CLUF d’Apple »). Les présentes conditions complètent le CLUF d’Apple. En cas de contradiction concernant la licence d’utilisation de l’application, le CLUF d’Apple prévaut.</p>
-            <p>En téléchargeant ou en utilisant l’application, vous acceptez ces conditions. Si vous ne les acceptez pas, n’utilisez pas l’application.</p>
-            <p>Notre adresse de contact est <a href="mailto:arctimers@gmail.com">arctimers@gmail.com</a>. Les coordonnées de professionnel exigées par le règlement européen sur les services numériques (DSA) figurent sur la page App Store de l’application.</p>
+    <main id="main">
+        <section class="hero">
+            <div class="wrap">
+                <div class="copy">
+                    <span class="kicker"><span class="live-dot" aria-hidden="true"></span>Compagnon ARC Raiders · iPhone et iPad</span>
+                    <h1>Ne ratez plus jamais une <span class="gold">Matriarche</span>.</h1>
+                    <p class="lede">Toutes les Map Conditions Topside en direct, et une alerte 15, 10 ou 5 minutes avant les raids qui vous intéressent.</p>
+                    <div class="cta-row">
+                        <a class="appstore" href="https://apps.apple.com/app/apple-store/id6758253513?pt=120827598&amp;ct=website-hero&amp;mt=8" aria-label="Télécharger ArcTimers dans l’App Store">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            <span><small>Télécharger dans</small><strong>l’App Store</strong></span>
+                        </a>
+                        <span class="cta-note">Gratuit · iOS 26 ou version ultérieure</span>
+                    </div>
+                </div>
+
+                <div class="stage" aria-hidden="true">
+                    <picture>
+                        <source type="image/avif" srcset="../assets/img/fr-ipad-01-timeline.avif" />
+                        <img class="ipad" src="../assets/img/fr-ipad-01-timeline.png" width="1400" height="1826" alt="" fetchpriority="high" />
+                    </picture>
+                    <picture>
+                        <source type="image/avif" srcset="../assets/img/fr-iphone-01-timeline.avif" />
+                        <img class="iphone" src="../assets/img/fr-iphone-01-timeline.png" width="760" height="1554" alt="" fetchpriority="high" />
+                    </picture>
+                    <div class="notif float">
+                        <img src="../assets/img/icon.png" alt="" width="38" height="38" />
+                        <div class="top"><b>ArcTimers</b><span>maintenant</span></div>
+                        <p><strong>Attention, Raider</strong>Matriarche arrive sur Stella Montis dans 10 minutes. Équipez-vous.</p>
+                    </div>
+                    <div class="chip float delay">
+                        <div>
+                            <div class="label">Commence dans</div>
+                            <div class="name">Matriarche · Stella Montis</div>
+                        </div>
+                        <div class="time" data-countdown>9m 59s</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>2. Projet de fan indépendant</h2>
-            <p>ArcTimers est une application compagnon non officielle, créée par un fan. Elle n’est ni affiliée à Embark Studios AB ou à MetaForge, ni approuvée, parrainée ou soutenue par eux.</p>
-            <p>ARC Raiders ainsi que ses noms, logos, images et autres contenus du jeu sont des marques ou la propriété d’Embark Studios AB. Les autres noms et marques appartiennent à leurs titulaires respectifs. L’application utilise les noms du jeu (comme les noms d’événements et de cartes) et les icônes associées uniquement pour désigner le contenu du jeu auquel elle se réfère.</p>
-            <p>Si vous détenez des droits sur un contenu affiché dans l’application et estimez qu’il est utilisé de façon inappropriée, écrivez-nous : nous l’examinerons et, le cas échéant, le retirerons rapidement.</p>
+        <div class="ticker" aria-label="Cartes et Map Conditions couvertes">
+            <div class="ticker-track">
+                <span>Champ de bataille du barrage</span><span>Matriarche</span><span>Ville enfouie</span><span>Raid nocturne</span><span>Port Spatial</span><span>Récolteur</span><span>Portail Bleu</span><span>Tempête électromagnétique</span><span>Stella Montis</span><span>Ouragan</span><span>Riven Tides</span><span>Cimetière d’épaves</span><span>Pendola Pass</span><span>Saison des récoltes</span>
+                <span aria-hidden="true">Champ de bataille du barrage</span><span aria-hidden="true">Matriarche</span><span aria-hidden="true">Ville enfouie</span><span aria-hidden="true">Raid nocturne</span><span aria-hidden="true">Port Spatial</span><span aria-hidden="true">Récolteur</span><span aria-hidden="true">Portail Bleu</span><span aria-hidden="true">Tempête électromagnétique</span><span aria-hidden="true">Stella Montis</span><span aria-hidden="true">Ouragan</span><span aria-hidden="true">Riven Tides</span><span aria-hidden="true">Cimetière d’épaves</span><span aria-hidden="true">Pendola Pass</span><span aria-hidden="true">Saison des récoltes</span>
+            </div>
+        </div>
+
+        <section class="section" id="features">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="kicker"><b>Ce que fait l’app</b><span class="dash"></span>Topside, d’un coup d’œil</span>
+                    <h2>Tout ce qui se passe Topside, sur un seul écran.</h2>
+                    <p>ArcTimers suit le calendrier des Map Conditions sur chaque carte. Vous savez quand monter Topside et ce qui vous y attend.</p>
+                </div>
+
+                <article class="feature">
+                    <div class="media reveal">
+                        <picture>
+                            <source type="image/avif" srcset="../assets/img/fr-iphone-01-timeline.avif" />
+                            <img class="phone" src="../assets/img/fr-iphone-01-timeline.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet À venir sur iPhone : Raid nocturne, Cimetière d’épaves et Saison des récoltes en cours avec leurs comptes à rebours, puis les conditions de 20 h." />
+                        </picture>
+                    </div>
+                    <div class="copy reveal">
+                        <span class="kicker"><b>01</b><span class="dash"></span>À venir</span>
+                        <h3>En cours, à suivre, et plus tard dans la journée</h3>
+                        <p>L’onglet À venir montre chaque Map Condition en cours avec un compte à rebours jusqu’à sa fin, puis ce qui commence ensuite et ce qui arrive plus tard dans la journée. Chacune dure une heure sur une carte.</p>
+                        <ul class="ticks">
+                            <li>Les événements en cours, avec leurs comptes à rebours</li>
+                            <li>Touchez la cloche pour être prévenu dès qu’un événement commence. Jusqu’à 5 événements suivis gratuitement.</li>
+                            <li>Tirez pour actualiser à tout moment</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="feature flip">
+                    <div class="media reveal">
+                        <picture>
+                            <source type="image/avif" srcset="../assets/img/fr-iphone-02-events.avif" />
+                            <img class="phone" src="../assets/img/fr-iphone-02-events.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet Événements : Chasse aux Trésors de Plage commence dans 13 minutes sur Riven Tides, avec ses prochains horaires en dessous." />
+                        </picture>
+                    </div>
+                    <div class="copy reveal">
+                        <span class="kicker"><b>02</b><span class="dash"></span>Événements</span>
+                        <h3>Sachez ce qui arrive, et où</h3>
+                        <p>Événements regroupe le calendrier par condition. Voyez quand commence le prochain Raid nocturne ou Récolteur, et sur quelles cartes.</p>
+                        <ul class="ticks">
+                            <li>Le prochain début et la carte de chaque condition</li>
+                            <li>Tous les horaires à venir, avec la carte concernée</li>
+                            <li>Les Épreuves de la semaine dans leur propre onglet</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="feature">
+                    <div class="media reveal">
+                        <div class="duo">
+                            <picture>
+                                <source type="image/avif" srcset="../assets/img/fr-iphone-03-alerts.avif" />
+                                <img class="phone" src="../assets/img/fr-iphone-03-alerts.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet Alertes avec deux alertes personnalisées : Ville aux Oiseaux sur Ville enfouie, et plusieurs conditions sur toutes les cartes." />
+                            </picture>
+                            <picture>
+                                <source type="image/avif" srcset="../assets/img/fr-iphone-04-alert-editor.avif" />
+                                <img class="phone" src="../assets/img/fr-iphone-04-alert-editor.png" width="760" height="1554" loading="lazy" decoding="async" alt="Modification d’une alerte personnalisée : Récolteur, Portail verrouillé et Raid nocturne sont sélectionnés." />
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="copy reveal">
+                        <span class="kicker"><b>03</b><span class="dash"></span>Alertes personnalisées <span class="pro-tag">PRO</span></span>
+                        <h3>Des alertes pour vos raids</h3>
+                        <p>Choisissez une fois les conditions et les cartes. ArcTimers vous alerte pour chacune, sans que vous ayez à revérifier le calendrier.</p>
+                        <div class="leadtimes" aria-label="Délais d’alerte">
+                            <span>15 min avant</span><span>10 min avant</span><span>5 min avant</span><span>Au début</span>
+                        </div>
+                        <ul class="ticks">
+                            <li>Combinez conditions et cartes dans une seule alerte</li>
+                            <li>Suspendez toutes les alertes pendant 1 heure, jusqu’à demain matin ou jusqu’à leur réactivation</li>
+                            <li>Les notifications restent programmées en arrière-plan</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section>
-            <h2>3. Ce que fait l’application</h2>
-            <ul>
-                <li><strong>À venir :</strong> affiche les événements de carte (Map Conditions) d’ARC Raiders en cours et à venir sur chaque carte, à partir des horaires fournis par MetaForge, un service communautaire tiers.</li>
-                <li><strong>Suivi :</strong> vous permet de suivre un événement pour recevoir une notification à son début. Sans Pro, vous pouvez suivre jusqu’à 5 événements à la fois.</li>
-                <li><strong>Alertes personnalisées (ArcTimers Pro) :</strong> règles enregistrées qui vous notifient pour chaque événement à venir correspondant aux types d’événements et aux cartes choisis, avec le délai choisi (par exemple 15, 10 ou 5 minutes avant, ou au début).</li>
-                <li><strong>Épreuves :</strong> affiche les Épreuves hebdomadaires, également à partir des données de MetaForge.</li>
-            </ul>
-            <p>Nous pouvons ajouter, modifier ou retirer des fonctionnalités au fil du temps.</p>
+        <section class="section" aria-labelledby="devices-title">
+            <div class="wrap">
+                <div class="section-head center reveal">
+                    <span class="kicker"><b>iPhone</b><span class="dash"></span><b>iPad</b></span>
+                    <h2 id="devices-title">Adapté à votre façon de jouer.</h2>
+                    <p>Tout le calendrier sur iPad, un coup d’œil sur iPhone. En mode clair ou sombre, en français ou en anglais.</p>
+                </div>
+                <div class="devices reveal">
+                    <figure>
+                        <picture>
+                            <source type="image/avif" srcset="../assets/img/fr-ipad-01-timeline.avif" />
+                            <img src="../assets/img/fr-ipad-01-timeline.png" width="1400" height="1826" loading="lazy" decoding="async" alt="L’onglet À venir sur iPad, avec trois conditions en cours et le calendrier des huit prochaines heures." />
+                        </picture>
+                        <figcaption>iPad</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <source type="image/avif" srcset="../assets/img/fr-iphone-01-timeline.avif" />
+                            <img src="../assets/img/fr-iphone-01-timeline.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet À venir sur iPhone en mode sombre." />
+                        </picture>
+                        <figcaption>Sombre</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <source type="image/avif" srcset="../assets/img/fr-iphone-01-timeline-light.avif" />
+                            <img src="../assets/img/fr-iphone-01-timeline-light.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet À venir sur iPhone en mode clair." />
+                        </picture>
+                        <figcaption>Clair</figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>4. Qui peut utiliser l’application</h2>
-            <p>Vous devez avoir au moins 13 ans, ou l’âge minimum plus élevé fixé par la loi de votre pays pour utiliser ce type d’application sans le consentement d’un parent. Si vous n’avez pas atteint l’âge de la majorité là où vous vivez, un parent ou tuteur légal doit lire et accepter ces conditions, et devrait approuver tout achat.</p>
-            <p>Aucun compte n’est nécessaire pour utiliser ArcTimers.</p>
+        <section class="section" id="preview">
+            <div class="wrap watch">
+                <div class="reveal">
+                    <span class="kicker"><b>Visite en 30 secondes</b></span>
+                    <h2>Prêt en quelques secondes.</h2>
+                    <ol class="steps">
+                        <li><div><strong>Ouvrez À venir</strong><span>Voyez ce qui est en cours et ce qui commence ensuite sur chaque carte.</span></div></li>
+                        <li><div><strong>Touchez la cloche</strong><span>Recevez une alerte dès que l’événement commence.</span></div></li>
+                        <li><div><strong>Créez une alerte personnalisée <span class="pro-tag">PRO</span></strong><span>Choisissez conditions, cartes et délais. C’est tout.</span></div></li>
+                    </ol>
+                </div>
+                <div class="video-frame reveal">
+                    <video muted loop playsinline preload="none" poster="../assets/video/fr-preview-poster.jpg" aria-label="Aperçu de l’app ArcTimers : l’onglet À venir, le suivi d’un événement, l’onglet Événements et les alertes personnalisées.">
+                        <source src="../assets/video/fr-preview.mp4" type="video/mp4" />
+                    </video>
+                    <button class="video-toggle" type="button" aria-pressed="false" aria-label="Lire ou mettre en pause l’aperçu">
+                        <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>
+                        <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11a.8.8 0 0 0 1.2.7l9-5.5a.8.8 0 0 0 0-1.4l-9-5.5A.8.8 0 0 0 4 2.5z"/></svg>
+                    </button>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>5. Achats ArcTimers Pro</h2>
-            <h3>Formules</h3>
-            <p>ArcTimers Pro est proposé sous forme d’abonnement hebdomadaire ou mensuel à renouvellement automatique, ou d’achat unique à vie. Les prix en vigueur sont affichés dans l’application et sur l’App Store, dans votre devise, avant l’achat. Pro débloque le suivi illimité des événements et les alertes personnalisées avec notifications anticipées.</p>
-
-            <h3>Paiement</h3>
-            <p>Tous les achats sont traités par Apple et débités de votre compte Apple lors de la confirmation de l’achat. Apple est le vendeur, et les <a href="https://www.apple.com/legal/internet-services/itunes/">Conditions générales des services multimédias</a> d’Apple s’appliquent également. Les taxes sont appliquées par Apple selon votre pays ou région.</p>
-
-            <h3>Renouvellement automatique et résiliation</h3>
-            <ul>
-                <li>Les abonnements se renouvellent automatiquement à la fin de chaque période, pour la même durée et au prix alors en vigueur, sauf si vous désactivez le renouvellement automatique au moins 24 heures avant la fin de la période en cours.</li>
-                <li>Le renouvellement est débité de votre compte Apple dans les 24 heures précédant la fin de la période en cours.</li>
-                <li>Vous pouvez gérer ou résilier votre abonnement à tout moment dans l’app Réglages : touchez votre nom, puis Abonnements. La résiliation arrête le prochain renouvellement, et vous conservez Pro jusqu’à la fin de la période déjà payée.</li>
-                <li>Supprimer l’application ne résilie pas l’abonnement.</li>
-                <li>Si Apple modifie le prix d’un abonnement, Apple vous prévient à l’avance et, lorsque c’est requis, vous demande votre accord avant d’appliquer le nouveau prix.</li>
-            </ul>
-
-            <h3>Essais gratuits et offres</h3>
-            <p>Certaines formules peuvent inclure un essai gratuit pour les clients admissibles. Apple détermine l’admissibilité ; en général, un essai n’est offert qu’une fois par compte Apple pour le groupe d’abonnements ArcTimers Pro. Sauf résiliation au moins 24 heures avant la fin de l’essai, l’abonnement démarre et vous êtes débité automatiquement. Toute partie non utilisée d’un essai gratuit prend fin lorsque vous achetez un abonnement. Les codes d’offre peuvent être utilisés dans les Réglages de l’application et sont soumis aux conditions indiquées avec l’offre.</p>
-
-            <h3>Achat à vie</h3>
-            <p>L’achat à vie est un paiement unique, et non un abonnement : il n’est jamais renouvelé ni débité à nouveau. Il débloque ArcTimers Pro sur les appareils connectés au même compte Apple, aussi longtemps que l’application reste disponible et maintenue. Il ne garantit pas qu’une fonctionnalité donnée, ni l’application elle-même, sera proposée indéfiniment (voir l’article 8).</p>
-
-            <h3>Restauration et partage familial</h3>
-            <p>Vous pouvez restaurer vos achats sur un autre appareil connecté au même compte Apple avec <em>Restaurer les achats</em> dans les Réglages de l’application. ArcTimers Pro n’est pas partagé via le partage familial.</p>
-
-            <h3>Fin de Pro</h3>
-            <p>Si votre abonnement prend fin, vos alertes personnalisées restent enregistrées sur votre appareil mais n’envoient plus de notifications jusqu’à ce que Pro soit de nouveau actif, et vous ne pouvez de nouveau suivre que 5 événements à la fois.</p>
-
-            <h3>Remboursements</h3>
-            <p>Comme Apple traite tous les paiements, nous ne pouvons pas effectuer de remboursement nous-mêmes. Vous pouvez demander un remboursement à Apple sur <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Les remboursements suivent les règles d’Apple et les droits que vous accorde la loi de votre lieu de résidence, y compris tout droit légal de rétractation.</p>
+        <section class="section" id="pro">
+            <div class="wrap">
+                <div class="section-head center reveal">
+                    <span class="kicker"><b>Gratuit</b><span class="dash"></span><b>Pro</b></span>
+                    <h2>Gratuit. Pro quand vous voulez plus.</h2>
+                    <p>Sans compte, sans pub, sans statistiques.</p>
+                </div>
+                <div class="plans">
+                    <div class="plan reveal">
+                        <h3>Gratuit</h3>
+                        <p class="price">Tout ce qu’il faut pour suivre le calendrier.</p>
+                        <ul class="ticks">
+                            <li>À venir, avec les comptes à rebours en direct</li>
+                            <li>Événements par condition et par carte</li>
+                            <li>Épreuves de la semaine</li>
+                            <li>Jusqu’à 5 événements suivis</li>
+                        </ul>
+                    </div>
+                    <div class="plan pro reveal">
+                        <h3>ArcTimers <span class="pro-tag">PRO</span></h3>
+                        <p class="price">Abonnement hebdomadaire ou mensuel, ou achat unique à vie. L’abonnement mensuel commence par une semaine gratuite.</p>
+                        <ul class="ticks">
+                            <li>Tout ce qui est gratuit</li>
+                            <li>Suivi illimité</li>
+                            <li>Alertes personnalisées pour toutes les conditions et cartes</li>
+                            <li>Alerte 15, 10 ou 5 minutes avant, ou au début</li>
+                            <li>Suspendre toutes les alertes</li>
+                        </ul>
+                        <p class="fine">L’app affiche les prix dans votre devise.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>6. Utilisation acceptable</h2>
-            <p>Vous vous engagez à ne pas :</p>
-            <ul>
-                <li>utiliser l’application d’une manière contraire à la loi ou aux droits d’autrui ;</li>
-                <li>copier, modifier, décompiler ou désassembler l’application, sauf lorsque la loi l’autorise malgré cette restriction ;</li>
-                <li>contourner ou altérer le système d’achat pour accéder aux fonctionnalités Pro sans payer ;</li>
-                <li>utiliser l’application pour surcharger, aspirer ou perturber les services de données dont elle dépend.</li>
-            </ul>
+        <section class="section" id="faq">
+            <div class="wrap">
+                <div class="section-head center reveal">
+                    <span class="kicker"><b>FAQ</b></span>
+                    <h2>Vos questions, nos réponses.</h2>
+                </div>
+                <div class="faq reveal">
+                    <details>
+                        <summary>ArcTimers est-elle faite par Embark Studios ?</summary>
+                        <p>Non. ArcTimers est une app compagnon non officielle, créée par des joueurs d’ARC Raiders. Elle n’est pas affiliée à Embark Studios. ARC Raiders est une marque d’Embark Studios AB.</p>
+                    </details>
+                    <details>
+                        <summary>D’où vient le calendrier ?</summary>
+                        <p>Des données communautaires ARC Raiders de MetaForge (<a href="https://metaforge.app">metaforge.app</a>). L’app se met à jour à l’ouverture, quand vous tirez pour actualiser, et en arrière-plan pour que vos notifications restent à l’heure.</p>
+                    </details>
+                    <details>
+                        <summary>Faut-il un compte ?</summary>
+                        <p>Non. Pas d’inscription, pas de pub, pas de statistiques, pas de SDK tiers. Vos événements suivis et vos alertes personnalisées restent sur votre appareil. Tous les détails dans la <a href="legal/#confidentialite">Politique de confidentialité</a>.</p>
+                    </details>
+                    <details>
+                        <summary>Quels appareils sont compatibles ?</summary>
+                        <p>iPhone et iPad sous iOS ou iPadOS 26 ou version ultérieure. L’app est disponible en français et en anglais.</p>
+                    </details>
+                    <details>
+                        <summary>Comment vous contacter ?</summary>
+                        <p>Écrivez à <a href="mailto:arctimers@gmail.com">arctimers@gmail.com</a>. Vos retours et idées sont les bienvenus.</p>
+                    </details>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>7. Exactitude des horaires et des notifications</h2>
-            <p>Les horaires des événements et les Épreuves proviennent d’un service tiers, et les événements eux-mêmes sont contrôlés par Embark Studios, qui peut les modifier ou les annuler à tout moment. Les informations de l’application peuvent être retardées, incomplètes, erronées ou momentanément indisponibles.</p>
-            <p>Les notifications sont programmées sur votre appareil. Leur arrivée à l’heure dépend de facteurs hors de notre contrôle, notamment l’autorisation des notifications, les modes de concentration, le mode économie d’énergie, l’actualisation en arrière-plan, l’accès au réseau pour mettre à jour les horaires, ainsi que l’horloge et le fuseau horaire de votre appareil.</p>
-            <p>Nous faisons de notre mieux pour qu’ArcTimers soit exacte, mais nous ne garantissons pas qu’un événement aura lieu à l’heure indiquée ni qu’une notification sera délivrée. ArcTimers est un outil pratique pour un jeu vidéo : ne vous y fiez pas pour quoi que ce soit d’important.</p>
-        </section>
-
-        <section>
-            <h2>8. Évolution et disponibilité de l’application</h2>
-            <p>Nous pouvons mettre à jour, modifier, suspendre ou cesser de proposer l’application ou une fonctionnalité à tout moment, par exemple si une source de données n’est plus disponible, si Embark modifie le jeu ou si nous ne pouvons plus maintenir l’application. Nous nous efforcerons de prévenir raisonnablement des changements importants dans l’application ou ses notes de version. Cela ne réduit aucun remboursement ni autre recours auquel la loi vous donne droit.</p>
-        </section>
-
-        <section>
-            <h2>9. Propriété intellectuelle</h2>
-            <p>L’application, y compris son code, son design et ses textes originaux, appartient à Franck Clement et vous est concédée sous licence, et non vendue, selon le CLUF d’Apple. Le contenu du jeu appartient à Embark Studios AB, et les données d’horaires sont fournies par MetaForge. Ces conditions ne vous accordent aucun droit sur ces éléments au-delà de l’utilisation personnelle et non commerciale de l’application.</p>
-        </section>
-
-        <section>
-            <h2>10. Exclusion de garanties</h2>
-            <p>Dans la mesure permise par la loi, l’application est fournie « telle quelle » et « selon sa disponibilité », sans garantie d’aucune sorte, expresse ou implicite, notamment de qualité marchande, d’adéquation à un usage particulier, d’exactitude et d’absence de contrefaçon.</p>
-        </section>
-
-        <section>
-            <h2>11. Limitation de responsabilité</h2>
-            <p>Dans la mesure permise par la loi, nous ne sommes pas responsables des pertes ou dommages indirects, accessoires, spéciaux ou consécutifs, ni de la perte de données, de progression, d’objets, d’occasions ou d’agrément dans le jeu, y compris en raison d’un événement ou d’une notification manqué ou inexact.</p>
-            <p>Dans la mesure permise par la loi, notre responsabilité totale envers vous pour toute réclamation liée à l’application est limitée au montant que vous avez payé pour ArcTimers Pro au cours des 12 mois précédant le fait à l’origine de la réclamation.</p>
-            <p>Rien dans ces conditions n’exclut ni ne limite une responsabilité qui ne peut l’être en vertu de la loi, comme la responsabilité en cas de fraude, de faute lourde, de faute intentionnelle, ou de décès ou de préjudice corporel causé par une négligence.</p>
-        </section>
-
-        <section>
-            <h2>12. Vos droits de consommateur</h2>
-            <p>Rien dans ces conditions ne supprime ni ne limite les droits que vous accorde, en tant que consommateur, la loi du pays, de la province ou de l’État où vous vivez, notamment la <em>Loi sur la protection du consommateur</em> du Québec et le droit de la consommation de l’Union européenne, du Royaume-Uni et de l’Australie. Si une partie de ces conditions contredit ces droits, ces droits prévalent.</p>
-        </section>
-
-        <section>
-            <h2>13. Droit applicable et litiges</h2>
-            <p>Ces conditions sont régies par les lois de la province canadienne où réside l’éditeur et par les lois fédérales du Canada qui s’y appliquent, sans égard aux règles de conflit de lois. Si vous êtes un consommateur, vous conservez la protection des dispositions impératives de la loi de votre lieu de résidence et pouvez saisir les tribunaux de ce lieu lorsque la loi le permet.</p>
-            <p>En cas de problème, écrivez-nous d’abord : la plupart des questions se règlent rapidement ainsi.</p>
-        </section>
-
-        <section>
-            <h2>14. Modifications de ces conditions</h2>
-            <p>Nous pouvons mettre à jour ces conditions, par exemple lorsque des fonctionnalités changent. Nous modifierons la date en haut de cette page et, pour les changements importants, vous en informerons dans l’application ou dans les notes de version avant leur entrée en vigueur. Les modifications ne s’appliquent jamais rétroactivement aux achats déjà effectués. Si vous continuez à utiliser l’application après leur entrée en vigueur, vous acceptez les conditions mises à jour. Si vous ne les acceptez pas, cessez d’utiliser l’application et résiliez tout abonnement.</p>
-            <p>Si une disposition de ces conditions est jugée inapplicable, les autres restent en vigueur.</p>
-        </section>
-
-        <h2 class="part-title" id="confidentialite">Politique de confidentialité</h2>
-
-        <section class="summary">
-            <h2>En bref</h2>
-            <ul>
-                <li>Pas de compte, pas de publicité, pas de statistiques d’utilisation, pas de pistage, et aucun SDK tiers.</li>
-                <li>Tout ce que vous configurez dans l’application (événements suivis, alertes personnalisées, préférences) reste sur votre appareil. Nous ne le recevons jamais.</li>
-                <li>L’application télécharge les horaires et les images depuis MetaForge, dont les serveurs voient votre adresse IP, comme pour toute requête Internet.</li>
-                <li>Les achats sont gérés par Apple. Nous ne voyons jamais votre nom, votre adresse courriel ni vos données de paiement.</li>
-                <li>Les seules informations personnelles que nous recevons sont celles que vous choisissez de nous envoyer par courriel.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>1. Responsable</h2>
-            <p>Franck Clement, éditeur d’ArcTimers, est responsable de cette politique et est la personne responsable de la protection des renseignements personnels. Pour toute question ou demande relative à la confidentialité, écrivez à <a href="mailto:arctimers@gmail.com">arctimers@gmail.com</a>.</p>
-            <p>Cette politique respecte la <em>Loi sur la protection des renseignements personnels et les documents électroniques</em> (LPRPDE) du Canada et la <em>Loi sur la protection des renseignements personnels dans le secteur privé</em> du Québec. Pour les utilisateurs de l’Espace économique européen, du Royaume-Uni et de la Suisse, elle contient aussi les informations exigées par le RGPD.</p>
-        </section>
-
-        <section>
-            <h2>2. Informations stockées uniquement sur votre appareil</h2>
-            <p>L’application stocke les éléments suivants sur votre appareil pour fonctionner. Ils ne sont envoyés ni à nous ni à personne d’autre :</p>
-            <ul>
-                <li>les événements que vous suivez et les alertes personnalisées que vous créez (types d’événements, cartes, délais et état activé/désactivé) ;</li>
-                <li>l’heure jusqu’à laquelle les alertes personnalisées sont en pause, si vous les avez mises en pause ;</li>
-                <li>le fait qu’ArcTimers Pro était actif lors de la dernière vérification, pour que les fonctionnalités Pro fonctionnent avant la réponse de l’App Store ;</li>
-                <li>de simples compteurs servant à décider quand afficher la demande d’évaluation d’Apple ;</li>
-                <li>des copies en cache des derniers horaires, Épreuves et images, pour que l’application s’ouvre vite et fonctionne hors ligne.</li>
-            </ul>
-            <p>L’application lit le fuseau horaire de votre appareil pour afficher les heures localement. Elle ne l’envoie nulle part.</p>
-            <p>Selon vos réglages, iOS peut inclure ces données dans les sauvegardes de votre appareil (sauvegarde iCloud ou sauvegarde sur ordinateur). Ces sauvegardes sont gérées par Apple selon sa <a href="https://www.apple.com/fr/legal/privacy/">politique de confidentialité</a>.</p>
-        </section>
-
-        <section>
-            <h2>3. Données téléchargées depuis MetaForge</h2>
-            <p>Pour afficher les horaires et les Épreuves, l’application télécharge des données depuis MetaForge (<a href="https://metaforge.app">metaforge.app</a>) et des images depuis les serveurs que MetaForge utilise pour les héberger. Elle le fait lorsque vous ouvrez ou actualisez l’application et, si l’actualisation en arrière-plan est activée, périodiquement en arrière-plan pour garder les notifications à jour.</p>
-            <p>Comme pour toute requête Internet, ces serveurs reçoivent votre adresse IP et des informations techniques standard comme l’heure de la requête et la version de votre système d’exploitation. L’application n’envoie aucun identifiant, aucune information de compte ni aucune donnée personnelle avec ces requêtes. MetaForge est un service indépendant et sa propre politique de confidentialité s’applique aux requêtes qu’il reçoit. Nous ne recevons pas les journaux des serveurs de MetaForge et n’y avons pas accès.</p>
-            <p>Le lien vers MetaForge dans les Réglages de l’application ouvre son site dans votre navigateur, où ses propres politiques s’appliquent.</p>
-        </section>
-
-        <section>
-            <h2>4. Notifications</h2>
-            <p>Toutes les notifications sont des notifications locales programmées sur votre appareil par iOS. L’application n’utilise pas de serveur de notifications push et ne collecte aucun jeton d’appareil. Vous pouvez désactiver les notifications à tout moment dans l’app Réglages.</p>
-        </section>
-
-        <section>
-            <h2>5. Achats</h2>
-            <p>Les achats et abonnements sont entièrement traités par Apple. Nous ne recevons ni votre nom, ni votre adresse courriel, ni les informations de votre compte Apple, ni vos données de paiement. L’application vérifie l’état de votre achat ArcTimers Pro sur votre appareil avec StoreKit d’Apple, qui renvoie une transaction signée par Apple. Cette vérification reste sur votre appareil.</p>
-            <p>Apple fournit aux développeurs des rapports de ventes et d’abonnements dans App Store Connect. Ces rapports ne vous identifient pas personnellement.</p>
-        </section>
-
-        <section>
-            <h2>6. Informations qu’Apple peut nous transmettre</h2>
-            <p>Si vous avez choisi, dans les réglages de votre appareil, de partager des analyses avec les développeurs d’apps, Apple peut nous fournir des rapports de plantage et des statistiques d’utilisation agrégées (comme le nombre d’installations et de sessions) via App Store Connect. Apple contrôle ces données selon sa propre politique de confidentialité, et elles ne nous permettent pas de vous identifier. Vous pouvez désactiver ce partage dans Réglages &gt; Confidentialité et sécurité &gt; Analyse et améliorations.</p>
-            <p>La demande d’évaluation est celle du système d’Apple. Apple gère les notes et les avis ; nous ne voyons que les avis publiés sur l’App Store.</p>
-        </section>
-
-        <section>
-            <h2>7. Lorsque vous nous écrivez</h2>
-            <p>Si vous nous écrivez, nous recevons votre adresse courriel, votre nom s’il figure dans votre courriel, le contenu de votre message et tout ce que vous choisissez d’y joindre (comme le modèle de votre appareil et votre version d’iOS).</p>
-            <ul>
-                <li><strong>Finalité :</strong> vous répondre et traiter votre demande. Nous ne l’utilisons pas à des fins de marketing.</li>
-                <li><strong>Base légale (RGPD) :</strong> notre intérêt légitime à vous répondre, ou les démarches nécessaires pour traiter votre demande.</li>
-                <li><strong>Hébergement :</strong> notre messagerie est hébergée par Google (Gmail). Les courriels peuvent être stockés sur des serveurs situés hors de votre pays, notamment aux États-Unis, où ils peuvent être accessibles aux autorités en vertu de la loi locale.</li>
-                <li><strong>Conservation :</strong> nous conservons les courriels uniquement le temps nécessaire pour traiter votre demande et son suivi, et les supprimons plus tôt si vous le demandez.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>8. Ce que nous ne faisons jamais</h2>
-            <p>Nous ne vendons, ne louons ni n’échangeons aucune information personnelle. Nous n’utilisons ni publicité, ni identifiant publicitaire, ni SDK d’analyse ou de pistage, et nous ne vous suivons pas à travers d’autres apps ou sites web. L’application n’accède ni à votre position, ni à vos contacts, photos, appareil photo, micro ou données de santé.</p>
-            <p>Nous ne pouvons communiquer les informations décrites à l’article 7 que si la loi l’exige, ou lorsque c’est nécessaire pour protéger nos droits.</p>
-        </section>
-
-        <section>
-            <h2>9. Vos choix et vos droits</h2>
-            <p>Comme l’application conserve vos données sur votre appareil, vous les contrôlez directement :</p>
-            <ul>
-                <li>arrêtez de suivre des événements et supprimez des alertes personnalisées dans l’application ;</li>
-                <li>désactivez les notifications ou l’actualisation en arrière-plan d’ArcTimers dans l’app Réglages ;</li>
-                <li>supprimez l’application pour effacer tout ce qu’elle a stocké sur votre appareil, caches compris.</li>
-            </ul>
-            <p>Selon votre lieu de résidence, vous pouvez avoir le droit d’accéder aux informations personnelles que nous détenons sur vous, de les faire rectifier ou supprimer, de retirer votre consentement, de vous opposer à leur traitement ou d’en demander la limitation, et de les recevoir dans un format portable. Comme les seules informations personnelles que nous pouvons détenir sont des échanges par courriel, écrivez-nous pour toute demande. Nous répondrons dans un délai de 30 jours.</p>
-            <p>Si notre réponse ne vous satisfait pas, vous pouvez vous adresser au <a href="https://www.priv.gc.ca/fr/">Commissariat à la protection de la vie privée du Canada</a>, à la <a href="https://www.cai.gouv.qc.ca">Commission d’accès à l’information</a> du Québec si vous vivez au Québec, ou à l’autorité de protection des données de votre pays dans l’UE (en France, la <a href="https://www.cnil.fr">CNIL</a>), au Royaume-Uni ou en Suisse.</p>
-        </section>
-
-        <section>
-            <h2>10. Enfants</h2>
-            <p>ArcTimers ne s’adresse pas aux enfants de moins de 13 ans, et l’application ne collecte d’informations personnelles auprès de personne. Si vous pensez qu’un enfant nous a envoyé des informations personnelles par courriel, contactez-nous et nous les supprimerons.</p>
-        </section>
-
-        <section>
-            <h2>11. Sécurité</h2>
-            <p>Les données stockées par l’application sont protégées par le cloisonnement des apps et la protection des données d’iOS. Toutes les requêtes réseau passent par des connexions HTTPS chiffrées. Aucune méthode de stockage ou de transmission n’est parfaitement sûre, mais comme nous ne collectons pas vos données, très peu d’entre elles sont exposées.</p>
-        </section>
-
-        <section>
-            <h2>12. Modifications de cette politique</h2>
-            <p>Nous mettrons à jour cette politique si le traitement des données par l’application change, par exemple si une nouvelle fonctionnalité nécessite de nouvelles données. Nous modifierons la date en haut de cette page et, pour les changements importants, vous en informerons dans l’application ou dans les notes de version avant leur entrée en vigueur.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Pour toute question sur ces conditions, demande relative à la confidentialité ou demande d’assistance, écrivez à <a href="mailto:arctimers@gmail.com">arctimers@gmail.com</a>. Pour une demande relative à vos données, indiquez l’objet « ArcTimers Data Request ». Pour l’assistance, précisez le modèle de votre appareil, votre version d’iOS et les étapes ayant mené au problème.</p>
-            <p class="muted">ArcTimers n’est pas affiliée à Embark Studios AB. ARC Raiders est une marque d’Embark Studios AB.</p>
+        <section class="section" aria-labelledby="final-title">
+            <div class="wrap">
+                <div class="final reveal">
+                    <img class="icon" src="../assets/img/icon.png" width="96" height="96" alt="" loading="lazy" />
+                    <h2 id="final-title">À bientôt Topside.</h2>
+                    <p>Téléchargez ArcTimers et recevez votre première alerte avant la prochaine Matriarche.</p>
+                    <div class="cta-row">
+                        <a class="appstore" href="https://apps.apple.com/app/apple-store/id6758253513?pt=120827598&amp;ct=website-footer&amp;mt=8" aria-label="Télécharger ArcTimers dans l’App Store">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            <span><small>Télécharger dans</small><strong>l’App Store</strong></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <nav aria-label="Pied de page">
+                <a href="legal/#conditions">Conditions d’utilisation</a>
+                <a href="legal/#confidentialite">Politique de confidentialité</a>
+                <a href="mailto:arctimers@gmail.com">Contact</a>
+                <a href="../" hreflang="en" lang="en">English</a>
+            </nav>
+            <p>ArcTimers est une app non officielle créée par des fans, non affiliée à Embark Studios. ARC Raiders est une marque d’Embark Studios AB. Horaires des événements fournis par MetaForge.</p>
+            <p>© 2026 Franck Clement</p>
+        </div>
+    </footer>
 </body>
 </html>
