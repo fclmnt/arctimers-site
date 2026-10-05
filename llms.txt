@@ -1,0 +1,34 @@
+# ArcTimers
+
+> ArcTimers is a free, unofficial ARC Raiders event timer for iPhone and iPad. It shows every Map Condition (Matriarch, Night Raid, Harvester, Electromagnetic Storm and more) on every map with live countdowns, and sends a notification before the events you track. Made by players, not affiliated with Embark Studios.
+
+- App Store: https://apps.apple.com/app/id6758253513
+- Website: https://arctimers.com/ (French: https://arctimers.com/fr/)
+- Contact: support@arctimers.com
+- Platforms: iPhone and iPad, iOS / iPadOS 26 or later. No Android version.
+- Languages: English, French
+- Price: free, with an optional Pro upgrade (weekly, monthly with a free first week, or a one-time lifetime purchase)
+- Privacy: no account, no ads, no analytics, no third-party SDKs
+- Schedule data: MetaForge community ARC Raiders data (https://metaforge.app)
+
+## How ARC Raiders Map Conditions work
+
+Map Conditions are timed events in ARC Raiders. Each one runs for one hour on one map, and they rotate across the maps through the day. Several conditions can be active at the same time on different maps.
+
+Conditions tracked: Matriarch, Night Raid, Harvester, Electromagnetic Storm, Hurricane, Cold Snap, Husk Graveyard, Lush Blooms, Bird City, Beachcombing, Close Scrutiny, Hidden Bunker, Launch Tower Loot, Locked Gate, Prospecting Probes, Uncovered Caches.
+
+Maps tracked: Dam Battlegrounds, Buried City, Spaceport, The Blue Gate, Stella Montis, Riven Tides, Pendola Pass (added in the Frozen Trail update).
+
+## Features
+
+- Timeline: conditions active now with a countdown to their end, what starts next, and what comes later today
+- Events: the schedule grouped by condition, with the next start time and map for each, plus Weekly Trials
+- Tracking: tap the bell on an event to be notified when it starts (up to 5 tracked events for free, unlimited with Pro)
+- Custom alerts (Pro): pick any mix of conditions and maps; get notified 15, 10 or 5 minutes before, or at start
+- Pause all alerts for an hour, until tomorrow morning, or until resumed (Pro)
+- Light and dark mode; iPad layout shows the full schedule
+
+## Pages
+
+- [Home and FAQ](https://arctimers.com/): features, Map Conditions, Free vs Pro, FAQ
+- [Terms of Use and Privacy Policy](https://arctimers.com/legal/)
