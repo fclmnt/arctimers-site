@@ -15,7 +15,7 @@
 
 Map Conditions are timed events in ARC Raiders. Each one runs for one hour on one map, and they rotate across the maps through the day. Several conditions can be active at the same time on different maps.
 
-Conditions tracked: Matriarch, Night Raid, Harvester, Electromagnetic Storm, Hurricane, Cold Snap, Husk Graveyard, Lush Blooms, Bird City, Beachcombing, Close Scrutiny, Hidden Bunker, Launch Tower Loot, Locked Gate, Prospecting Probes, Uncovered Caches.
+Conditions tracked: Matriarch, Night Raid, Harvester, Electromagnetic Storm, ARC Frigate, Redirection, Hurricane, Cold Snap, Husk Graveyard, Lush Blooms, Bird City, Beachcombing, Close Scrutiny, Hidden Bunker, Launch Tower Loot, Locked Gate, Prospecting Probes, Uncovered Caches.
 
 Maps tracked: Dam Battlegrounds, Buried City, Spaceport, The Blue Gate, Stella Montis, Riven Tides, Pendola Pass (added in the Frozen Trail update).
 
