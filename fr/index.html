@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#0b0d12" />
+    <meta name="theme-color" content="#e9e1d2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f1116" media="(prefers-color-scheme: dark)" />
+    <script>try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
     <title>Timer d’événements ARC Raiders et alertes | ArcTimers</title>
     <meta name="description" content="Le timer des événements ARC Raiders sur iPhone et iPad : chaque Map Condition, comme la Matriarche, sur chaque carte, avec une alerte avant le début." />
     <link rel="canonical" href="https://arctimers.com/fr/" />
@@ -22,6 +24,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+    <link rel="preload" href="../assets/fonts/BarlowCondensed-Bold.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="../assets/site.css" />
     <script type="application/ld+json">
 {
@@ -50,7 +53,7 @@
                 "@id": "https://arctimers.com/#app"
             },
             "primaryImageOfPage": "https://arctimers.com/assets/img/og-fr.jpg",
-            "dateModified": "2026-10-05"
+            "dateModified": "2026-10-12"
         },
         {
             "@type": "MobileApplication",
@@ -210,7 +213,8 @@
                 <a href="#faq">FAQ</a>
                 <a class="lang" href="../" hreflang="en" lang="en">EN</a>
             </nav>
-            <a class="btn btn-gold" href="https://apps.apple.com/app/apple-store/id6758253513?pt=120827598&amp;ct=website-header&amp;mt=8">Télécharger</a>
+            <button class="theme-toggle" type="button" aria-label="Passer en mode sombre" data-label-dark="Passer en mode sombre" data-label-light="Passer en mode clair"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.2 14.6A8.6 8.6 0 0 1 9.4 3.8a.6.6 0 0 0-.8-.7A9.4 9.4 0 1 0 20.9 15.4a.6.6 0 0 0-.7-.8z"/></svg></button>
+            <a class="btn btn-accent" href="https://apps.apple.com/app/apple-store/id6758253513?pt=120827598&amp;ct=website-header&amp;mt=8">Télécharger</a>
         </div>
     </header>
 
@@ -218,7 +222,7 @@
         <section class="hero">
             <div class="wrap">
                 <div class="copy">
-                    <h1><span class="kicker"><span class="live-dot" aria-hidden="true"></span>Timer d’événements ARC Raiders</span> Ne ratez plus jamais une <span class="gold">Matriarche</span>.</h1>
+                    <h1><span class="kicker"><span class="live-dot" aria-hidden="true"></span>Timer d’événements ARC Raiders</span> <span class="line l1">Matriarche.</span> <span class="line l2">Raid nocturne.</span> <span class="line">Jamais ratés.</span></h1>
                     <p class="lede">Toutes les Map Conditions Topside en direct, et une alerte 15, 10 ou 5 minutes avant les raids qui vous intéressent.</p>
                     <div class="cta-row">
                         <a class="appstore" href="https://apps.apple.com/app/apple-store/id6758253513?pt=120827598&amp;ct=website-hero&amp;mt=8" aria-label="Télécharger ArcTimers dans l’App Store">
@@ -231,24 +235,34 @@
 
                 <div class="stage" aria-hidden="true">
                     <picture>
-                        <source type="image/avif" srcset="../assets/img/fr-ipad-01-timeline.avif" />
-                        <img class="ipad" src="../assets/img/fr-ipad-01-timeline.png" width="1400" height="1826" alt="ArcTimers sur iPad avec le calendrier en direct des Map Conditions d’ARC Raiders." fetchpriority="high" />
+                        <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-ipad-01-timeline.avif" data-scheme="dark" />
+                        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-ipad-01-timeline.png" data-scheme="dark" />
+                        <source type="image/avif" srcset="../assets/img/fr-ipad-01-timeline-light.avif" />
+                        <img class="ipad" src="../assets/img/fr-ipad-01-timeline-light.png" width="1400" height="1826" alt="ArcTimers sur iPad avec le calendrier en direct des Map Conditions d’ARC Raiders." fetchpriority="high" />
                     </picture>
                     <picture>
-                        <source type="image/avif" srcset="../assets/img/fr-iphone-01-timeline.avif" />
-                        <img class="iphone" src="../assets/img/fr-iphone-01-timeline.png" width="760" height="1554" alt="ArcTimers sur iPhone avec les événements ARC Raiders en cours et leurs comptes à rebours." fetchpriority="high" />
+                        <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-01-timeline.avif" data-scheme="dark" />
+                        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-01-timeline.png" data-scheme="dark" />
+                        <source type="image/avif" srcset="../assets/img/fr-iphone-01-timeline-light.avif" />
+                        <img class="iphone" src="../assets/img/fr-iphone-01-timeline-light.png" width="760" height="1554" alt="ArcTimers sur iPhone avec les événements ARC Raiders en cours et leurs comptes à rebours." fetchpriority="high" />
                     </picture>
-                    <div class="notif float">
-                        <img src="../assets/img/icon.png" alt="Icône de l’app ArcTimers" width="38" height="38" />
-                        <div class="top"><b>ArcTimers</b><span>maintenant</span></div>
-                        <p><strong>Attention, Raider</strong>Matriarche arrive sur Stella Montis dans 10 minutes. Équipez-vous.</p>
+                    <div class="notifs float">
+                        <div class="notif">
+                            <img src="../assets/img/icon.png" alt="" width="38" height="38" />
+                            <div class="top"><b>Attention, Raider</b><span>maintenant</span></div>
+                            <p>Matriarche arrive sur Port Spatial dans 15 minutes. Équipez-vous.</p>
+                        </div>
+                        <div class="notif">
+                            <img src="../assets/img/icon.png" alt="" width="38" height="38" />
+                            <div class="top"><b>En cours Topside</b><span>il y a 15 min</span></div>
+                            <p>C’est parti pour Raid nocturne sur Portail Bleu. Vous avez une heure.</p>
+                        </div>
                     </div>
                     <div class="chip float delay">
-                        <div>
-                            <div class="label">Commence dans</div>
-                            <div class="name">Matriarche · Stella Montis</div>
-                        </div>
-                        <div class="time" data-countdown>9m 59s</div>
+                        <div class="label">Se termine dans</div>
+                        <div class="name">Matriarche · Port Spatial</div>
+                        <div class="time" data-countdown="1361" data-minutes="min">22min 41s</div>
+                        <div class="bar"><i></i></div>
                     </div>
                 </div>
             </div>
@@ -272,8 +286,10 @@
                 <article class="feature">
                     <div class="media reveal">
                         <picture>
-                            <source type="image/avif" srcset="../assets/img/fr-iphone-01-timeline.avif" />
-                            <img class="phone" src="../assets/img/fr-iphone-01-timeline.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet À venir d’ArcTimers pour ARC Raiders sur iPhone : Matriarche, Raid nocturne, Redirection et Frégate ARC en cours avec 22 minutes restantes, puis les conditions de 15 h." />
+                            <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-01-timeline.avif" data-scheme="dark" />
+                            <source type="image/png" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-01-timeline.png" data-scheme="dark" />
+                            <source type="image/avif" srcset="../assets/img/fr-iphone-01-timeline-light.avif" />
+                            <img class="phone" src="../assets/img/fr-iphone-01-timeline-light.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet À venir d’ArcTimers pour ARC Raiders sur iPhone : Matriarche, Raid nocturne, Redirection et Frégate ARC en cours avec 22 minutes restantes, puis les conditions de 15 h." />
                         </picture>
                     </div>
                     <div class="copy reveal">
@@ -291,8 +307,10 @@
                 <article class="feature flip">
                     <div class="media reveal">
                         <picture>
-                            <source type="image/avif" srcset="../assets/img/fr-iphone-02-events.avif" />
-                            <img class="phone" src="../assets/img/fr-iphone-02-events.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet Événements : Butin de la tour de lancement commence dans 4 h 22 sur Port Spatial, suivi de Caches découvertes et Chasse aux Trésors de Plage." />
+                            <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-02-events.avif" data-scheme="dark" />
+                            <source type="image/png" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-02-events.png" data-scheme="dark" />
+                            <source type="image/avif" srcset="../assets/img/fr-iphone-02-events-light.avif" />
+                            <img class="phone" src="../assets/img/fr-iphone-02-events-light.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet Événements : Butin de la tour de lancement commence dans 4 h 22 sur Port Spatial, suivi de Caches découvertes et Chasse aux Trésors de Plage." />
                         </picture>
                     </div>
                     <div class="copy reveal">
@@ -311,12 +329,16 @@
                     <div class="media reveal">
                         <div class="duo">
                             <picture>
-                                <source type="image/avif" srcset="../assets/img/fr-iphone-03-alerts.avif" />
-                                <img class="phone" src="../assets/img/fr-iphone-03-alerts.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet Alertes avec deux alertes personnalisées : Frégate ARC et Redirection, et plusieurs autres conditions, toutes deux sur toutes les cartes." />
+                                <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-03-alerts.avif" data-scheme="dark" />
+                                <source type="image/png" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-03-alerts.png" data-scheme="dark" />
+                                <source type="image/avif" srcset="../assets/img/fr-iphone-03-alerts-light.avif" />
+                                <img class="phone" src="../assets/img/fr-iphone-03-alerts-light.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet Alertes avec deux alertes personnalisées : Frégate ARC et Redirection, et plusieurs autres conditions, toutes deux sur toutes les cartes." />
                             </picture>
                             <picture>
-                                <source type="image/avif" srcset="../assets/img/fr-iphone-04-alert-editor.avif" />
-                                <img class="phone" src="../assets/img/fr-iphone-04-alert-editor.png" width="760" height="1554" loading="lazy" decoding="async" alt="Modification d’une alerte : Tempête électromagnétique, Récolteur, Raid nocturne et Sondes de prospection sont sélectionnés." />
+                                <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-04-alert-editor.avif" data-scheme="dark" />
+                                <source type="image/png" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-04-alert-editor.png" data-scheme="dark" />
+                                <source type="image/avif" srcset="../assets/img/fr-iphone-04-alert-editor-light.avif" />
+                                <img class="phone" src="../assets/img/fr-iphone-04-alert-editor-light.png" width="760" height="1554" loading="lazy" decoding="async" alt="Modification d’une alerte : Tempête électromagnétique, Récolteur, Raid nocturne et Sondes de prospection sont sélectionnés." />
                             </picture>
                         </div>
                     </div>
@@ -331,6 +353,27 @@
                             <li>Combinez conditions et cartes dans une seule alerte</li>
                             <li>Suspendez toutes les alertes pendant 1 heure, jusqu’à demain matin ou jusqu’à leur réactivation</li>
                             <li>Les notifications restent programmées en arrière-plan</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="feature flip">
+                    <div class="media reveal">
+                        <picture>
+                            <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-05-trials.avif" data-scheme="dark" />
+                            <source type="image/png" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-05-trials.png" data-scheme="dark" />
+                            <source type="image/avif" srcset="../assets/img/fr-iphone-05-trials-light.avif" />
+                            <img class="phone" src="../assets/img/fr-iphone-05-trials-light.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet Épreuves : les Épreuves de la semaine, chacune avec son image, et le Col de Pendola indiqué comme meilleure carte pour deux d’entre elles." />
+                        </picture>
+                    </div>
+                    <div class="copy reveal">
+                        <span class="kicker"><b>04</b><span class="dash"></span>Épreuves</span>
+                        <h3>Là où chaque Épreuve rapporte le plus</h3>
+                        <p>L’onglet Épreuves liste les Épreuves de la semaine et celles de la semaine prochaine, avec le temps restant avant la fin. Ouvrez-en une pour voir les cartes et les conditions où elle rapporte le plus de points, et visez les 3 étoiles.</p>
+                        <ul class="ticks">
+                            <li>Les Épreuves de cette semaine et de la suivante</li>
+                            <li>Les meilleures cartes et conditions pour chaque Épreuve</li>
+                            <li>Une alerte personnalisée à partir du meilleur réglage d’une Épreuve (Pro)</li>
                         </ul>
                     </div>
                 </article>
@@ -395,8 +438,10 @@
                 <div class="devices reveal">
                     <figure>
                         <picture>
-                            <source type="image/avif" srcset="../assets/img/fr-ipad-01-timeline.avif" />
-                            <img src="../assets/img/fr-ipad-01-timeline.png" width="1400" height="1826" loading="lazy" decoding="async" alt="ArcTimers sur iPad, le calendrier des événements ARC Raiders, avec quatre conditions en cours et le calendrier des heures à venir." />
+                            <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-ipad-01-timeline.avif" data-scheme="dark" />
+                            <source type="image/png" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-ipad-01-timeline.png" data-scheme="dark" />
+                            <source type="image/avif" srcset="../assets/img/fr-ipad-01-timeline-light.avif" />
+                            <img src="../assets/img/fr-ipad-01-timeline-light.png" width="1400" height="1826" loading="lazy" decoding="async" alt="ArcTimers sur iPad, le calendrier des événements ARC Raiders, avec quatre conditions en cours et le calendrier des heures à venir." />
                         </picture>
                         <figcaption>iPad</figcaption>
                     </figure>

@@ -1,6 +1,47 @@
 (() => {
-    document.documentElement.classList.remove("no-js");
+    const root = document.documentElement;
+    root.classList.remove("no-js");
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // Appearance: follows the system until the header button pins light or dark.
+    // The <head> script applies a saved choice before the first paint.
+    const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+    const colors = { light: "#e9e1d2", dark: "#0f1116" };
+    const pinned = () => (root.dataset.theme === "light" || root.dataset.theme === "dark" ? root.dataset.theme : null);
+    const current = () => pinned() || (systemDark.matches ? "dark" : "light");
+    const toggle = document.querySelector(".theme-toggle");
+
+    const applyTheme = () => {
+        const theme = pinned();
+        // Screenshots: the dark sources carry the system query; a pinned theme overrides it.
+        document.querySelectorAll('source[data-scheme="dark"]').forEach((source) => {
+            source.media = theme ? (theme === "dark" ? "all" : "not all") : "(prefers-color-scheme: dark)";
+        });
+        document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
+            meta.content = colors[theme || (meta.media.includes("dark") ? "dark" : "light")];
+        });
+        if (toggle) {
+            const next = current() === "dark" ? "light" : "dark";
+            toggle.setAttribute("aria-label", toggle.dataset[next === "dark" ? "labelDark" : "labelLight"]);
+        }
+    };
+
+    if (toggle) {
+        toggle.addEventListener("click", () => {
+            const next = current() === "dark" ? "light" : "dark";
+            // Back to following the system when the choice matches it.
+            const matchesSystem = next === (systemDark.matches ? "dark" : "light");
+            if (matchesSystem) delete root.dataset.theme;
+            else root.dataset.theme = next;
+            try {
+                if (matchesSystem) localStorage.removeItem("theme");
+                else localStorage.setItem("theme", next);
+            } catch (e) {}
+            applyTheme();
+        });
+    }
+    systemDark.addEventListener("change", applyTheme);
+    applyTheme();
 
     // Header border once the page scrolls.
     const header = document.querySelector(".site-header");
@@ -24,19 +65,24 @@
         revealed.forEach((el) => io.observe(el));
     }
 
-    // Hero countdown chip: ticks down from 9:59 and starts over.
+    // Hero "Ends in" readout: counts down from the time in its data attribute, fills
+    // the hour's progress bar, and starts over at zero.
     const time = document.querySelector("[data-countdown]");
     if (time) {
-        let seconds = 10 * 60 - 1;
+        const start = Number(time.dataset.countdown) || 22 * 60 + 41;
+        const bar = document.querySelector(".chip .bar");
+        const minutes = time.dataset.minutes || "m";
+        let seconds = start;
         const render = () => {
             const m = Math.floor(seconds / 60);
             const s = String(seconds % 60).padStart(2, "0");
-            time.textContent = `${m}m ${s}s`;
+            time.textContent = `${m}${minutes} ${s}s`;
+            if (bar) bar.style.setProperty("--progress", `${((3600 - seconds) / 3600) * 100}%`);
         };
         render();
         if (!reduceMotion) {
             setInterval(() => {
-                seconds = seconds > 0 ? seconds - 1 : 10 * 60 - 1;
+                seconds = seconds > 0 ? seconds - 1 : start;
                 render();
             }, 1000);
         }
