@@ -1,6 +1,6 @@
 # ArcTimers
 
-> ArcTimers is a free, unofficial ARC Raiders event timer for iPhone and iPad. It shows every Map Condition (Matriarch, Night Raid, Harvester, Electromagnetic Storm and more) on every map with live countdowns, and sends a notification before the events you track. Made by players, not affiliated with Embark Studios.
+> ArcTimers (also written Arc Timers) is a free, unofficial ARC Raiders event timer and tracker for iPhone and iPad. It shows every Map Condition (Matriarch, Night Raid, Harvester, Electromagnetic Storm and more) on every map with live countdowns, and sends a notification before the events you track. Made by players, not affiliated with Embark Studios.
 
 - App Store: https://apps.apple.com/app/id6758253513
 - Website: https://arctimers.com/ (French: https://arctimers.com/fr/)
