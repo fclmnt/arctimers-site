@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#0f1116" media="(prefers-color-scheme: dark)" />
     <script>try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
     <title>Timer et tracker d’événements ARC Raiders | ArcTimers</title>
-    <meta name="description" content="Le timer et tracker des événements ARC Raiders sur iPhone et iPad : chaque Map Condition, comme la Matriarche, sur chaque carte, avec une alerte avant le début." />
+    <meta name="description" content="Le timer, tracker et les cartes d’ARC Raiders sur iPhone et iPad : chaque Map Condition, comme la Matriarche, sur chaque carte, avec une alerte avant le début." />
     <link rel="canonical" href="https://arctimers.com/fr/" />
     <link rel="alternate" hreflang="en" href="https://arctimers.com/" />
     <link rel="alternate" hreflang="fr" href="https://arctimers.com/fr/" />
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ArcTimers" />
     <meta property="og:title" content="ArcTimers : ne ratez plus jamais une Matriarche" />
-    <meta property="og:description" content="Les Map Conditions d’ARC Raiders en direct, et une alerte avant vos raids. Gratuit sur iPhone et iPad." />
+    <meta property="og:description" content="Les Map Conditions d’ARC Raiders en direct, les cartes avec les ARC, conteneurs et points d’extraction, et une alerte avant vos raids. Gratuit sur iPhone et iPad." />
     <meta property="og:url" content="https://arctimers.com/fr/" />
     <meta property="og:image" content="https://arctimers.com/assets/img/og-fr.jpg" />
     <meta property="og:locale" content="fr_FR" />
@@ -66,7 +66,7 @@
                 "ARC Raiders event timer",
                 "ARC Raiders event tracker"
             ],
-            "description": "Timer des événements ARC Raiders et tracker des Map Conditions, avec une alerte avant chaque Matriarche, Raid nocturne, Récolteur et autre événement.",
+            "description": "Timer des événements ARC Raiders et tracker des Map Conditions, avec une alerte avant chaque Matriarche, Raid nocturne, Récolteur et autre événement, et les cartes avec les ARC, les conteneurs, les quêtes et les points d’extraction.",
             "operatingSystem": "iOS 26, iPadOS 26",
             "applicationCategory": "UtilitiesApplication",
             "url": "https://arctimers.com/fr/",
@@ -99,6 +99,7 @@
                 "Calendrier des Map Conditions en direct avec comptes à rebours",
                 "Événements par condition et par carte",
                 "Épreuves de la semaine",
+                "Chaque carte, avec les ARC, conteneurs, quêtes et points d’extraction",
                 "Notification au début des événements suivis",
                 "Alertes personnalisées 15, 10 ou 5 minutes avant, ou au début (Pro)",
                 "Suspendre toutes les alertes (Pro)",
@@ -143,7 +144,7 @@
                     "name": "ArcTimers est-elle gratuite ?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Oui. À venir, Événements, les Épreuves de la semaine et le suivi de 5 événements sont gratuits. ArcTimers Pro ajoute le suivi illimité, les alertes personnalisées pour toutes les conditions et cartes, une alerte 15, 10 ou 5 minutes avant, et la suspension des alertes. Pro existe en abonnement hebdomadaire, mensuel avec une semaine gratuite, ou en achat unique à vie."
+                        "text": "Oui. À venir, Événements, les Épreuves de la semaine, les Cartes et le suivi de 5 événements sont gratuits. ArcTimers Pro ajoute le suivi illimité, les alertes personnalisées pour toutes les conditions et cartes, une alerte 15, 10 ou 5 minutes avant, et la suspension des alertes. Pro existe en abonnement hebdomadaire, mensuel avec une semaine gratuite, ou en achat unique à vie."
                     }
                 },
                 {
@@ -160,6 +161,14 @@
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "Oui. Pendola Pass, la carte qui arrive avec la mise à jour Frozen Trail, est suivie comme toutes les autres : Champ de bataille du barrage, Ville enfouie, Port Spatial, Portail Bleu, Stella Montis et Riven Tides."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "ArcTimers a-t-elle des cartes d’ARC Raiders ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Oui. L’onglet Cartes contient chaque carte, du Champ de bataille du barrage au Col de Pendola, avec les ARC, les conteneurs, les quêtes et les points d’extraction de chacune. Cherchez un point d’intérêt, ou n’affichez que ceux qui vous intéressent. Les cartes sont gratuites."
                     }
                 },
                 {
@@ -283,7 +292,7 @@
                 <div class="section-head reveal">
                     <span class="kicker"><b>Ce que fait l’app</b><span class="dash"></span>Topside, d’un coup d’œil</span>
                     <h2>Tout ce qui se passe Topside, sur un seul écran.</h2>
-                    <p>ArcTimers (Arc Timers) est un timer et tracker d’événements ARC Raiders gratuit et non officiel pour iPhone et iPad. L’app suit le calendrier des Map Conditions sur chaque carte. Vous savez quand monter Topside et ce qui vous y attend.</p>
+                    <p>ArcTimers (Arc Timers) est un timer et tracker d’événements ARC Raiders gratuit et non officiel pour iPhone et iPad. L’app suit le calendrier des Map Conditions sur chaque carte. Vous savez quand monter Topside et ce qui vous y attend, et ses cartes montrent où trouver les ARC, les conteneurs, les quêtes et les points d’extraction.</p>
                 </div>
 
                 <article class="feature">
@@ -309,27 +318,6 @@
 
                 <article class="feature flip">
                     <div class="media reveal">
-                        <picture>
-                            <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-02-events.avif" data-scheme="dark" />
-                            <source type="image/png" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-02-events.png" data-scheme="dark" />
-                            <source type="image/avif" srcset="../assets/img/fr-iphone-02-events-light.avif" />
-                            <img class="phone" src="../assets/img/fr-iphone-02-events-light.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet Événements : Butin de la tour de lancement commence dans 4 h 22 sur Port Spatial, suivi de Caches découvertes et Chasse aux Trésors de Plage." />
-                        </picture>
-                    </div>
-                    <div class="copy reveal">
-                        <span class="kicker"><b>02</b><span class="dash"></span>Événements</span>
-                        <h3>Sachez ce qui arrive, et où</h3>
-                        <p>Événements regroupe le calendrier par condition. Voyez quand commence le prochain Raid nocturne ou Récolteur, et sur quelles cartes.</p>
-                        <ul class="ticks">
-                            <li>Le prochain début et la carte de chaque condition</li>
-                            <li>Tous les horaires à venir, avec la carte concernée</li>
-                            <li>Les Épreuves de la semaine dans leur propre onglet</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="feature">
-                    <div class="media reveal">
                         <div class="duo">
                             <picture>
                                 <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="../assets/img/fr-iphone-03-alerts.avif" data-scheme="dark" />
@@ -346,7 +334,7 @@
                         </div>
                     </div>
                     <div class="copy reveal">
-                        <span class="kicker"><b>03</b><span class="dash"></span>Alertes personnalisées <span class="pro-tag">PRO</span></span>
+                        <span class="kicker"><b>02</b><span class="dash"></span>Alertes personnalisées <span class="pro-tag">PRO</span></span>
                         <h3>Des alertes pour vos raids</h3>
                         <p>Choisissez une fois les conditions et les cartes. ArcTimers vous alerte pour chacune, sans que vous ayez à revérifier le calendrier.</p>
                         <div class="leadtimes" aria-label="Délais d’alerte">
@@ -356,6 +344,31 @@
                             <li>Combinez conditions et cartes dans une seule alerte</li>
                             <li>Suspendez toutes les alertes pendant 1 heure, jusqu’à demain matin ou jusqu’à leur réactivation</li>
                             <li>Les notifications restent programmées en arrière-plan</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="feature">
+                    <div class="media reveal">
+                        <div class="duo">
+                            <picture>
+                                <source type="image/avif" srcset="../assets/img/fr-iphone-07-maps-light.avif" />
+                                <img class="phone" src="../assets/img/fr-iphone-07-maps-light.png" width="760" height="1554" loading="lazy" decoding="async" alt="L’onglet Cartes : toutes les cartes d’ARC Raiders, du Col de Pendola à Riven Tides, Stella Montis, Portail Bleu et Ville enfouie." />
+                            </picture>
+                            <picture>
+                                <source type="image/avif" srcset="../assets/img/fr-iphone-08-map-light.avif" />
+                                <img class="phone" src="../assets/img/fr-iphone-08-map-light.png" width="760" height="1554" loading="lazy" decoding="async" alt="La carte du Col de Pendola avec seulement les Bully affichés, et la liste des points d’intérêt en dessous, chacun avec son nombre." />
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="copy reveal">
+                        <span class="kicker"><b>03</b><span class="dash"></span>Cartes</span>
+                        <h3>Chaque carte, dans votre poche</h3>
+                        <p>Ouvrez n’importe quelle carte, de la Région de la rouille au Col de Pendola, et repérez les ARC, les conteneurs, les quêtes et les points d’extraction. Cherchez-les, et n’affichez que ce que vous cherchez.</p>
+                        <ul class="ticks">
+                            <li>Les sept cartes, Col de Pendola compris</li>
+                            <li>ARC, conteneurs, quêtes et points d’extraction, avec leur nombre</li>
+                            <li>Recherche de points d’intérêt, et filtre pour n’afficher que ceux qui vous intéressent</li>
                         </ul>
                     </div>
                 </article>
@@ -482,6 +495,7 @@
                             <li>À venir, avec les comptes à rebours en direct</li>
                             <li>Événements par condition et par carte</li>
                             <li>Épreuves de la semaine</li>
+                            <li>Cartes avec les ARC, conteneurs, quêtes et points d’extraction</li>
                             <li>Jusqu’à 5 événements suivis</li>
                         </ul>
                     </div>
@@ -522,7 +536,7 @@
                     </details>
                     <details>
                         <summary>ArcTimers est-elle gratuite ?</summary>
-                        <p>Oui. À venir, Événements, les Épreuves de la semaine et le suivi de 5 événements sont gratuits. ArcTimers Pro ajoute le suivi illimité, les alertes personnalisées pour toutes les conditions et cartes, une alerte 15, 10 ou 5 minutes avant, et la suspension des alertes. Pro existe en abonnement hebdomadaire, mensuel avec une semaine gratuite, ou en achat unique à vie.</p>
+                        <p>Oui. À venir, Événements, les Épreuves de la semaine, les Cartes et le suivi de 5 événements sont gratuits. ArcTimers Pro ajoute le suivi illimité, les alertes personnalisées pour toutes les conditions et cartes, une alerte 15, 10 ou 5 minutes avant, et la suspension des alertes. Pro existe en abonnement hebdomadaire, mensuel avec une semaine gratuite, ou en achat unique à vie.</p>
                     </details>
                     <details>
                         <summary>Quand a lieu la prochaine Matriarche ou le prochain Raid nocturne dans ARC Raiders ?</summary>
@@ -531,6 +545,10 @@
                     <details>
                         <summary>Pendola Pass et Frozen Trail sont-ils couverts ?</summary>
                         <p>Oui. Pendola Pass, la carte qui arrive avec la mise à jour Frozen Trail, est suivie comme toutes les autres : Champ de bataille du barrage, Ville enfouie, Port Spatial, Portail Bleu, Stella Montis et Riven Tides.</p>
+                    </details>
+                    <details>
+                        <summary>ArcTimers a-t-elle des cartes d’ARC Raiders ?</summary>
+                        <p>Oui. L’onglet Cartes contient chaque carte, du Champ de bataille du barrage au Col de Pendola, avec les ARC, les conteneurs, les quêtes et les points d’extraction de chacune. Cherchez un point d’intérêt, ou n’affichez que ceux qui vous intéressent. Les cartes sont gratuites.</p>
                     </details>
                     <details>
                         <summary>D’où vient le calendrier ?</summary>

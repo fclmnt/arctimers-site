@@ -1,6 +1,6 @@
 # ArcTimers
 
-> ArcTimers (also written Arc Timers) is a free, unofficial ARC Raiders event timer and tracker for iPhone and iPad. It shows every Map Condition (Matriarch, Night Raid, Harvester, Electromagnetic Storm and more) on every map with live countdowns, and sends a notification before the events you track. Made by players, not affiliated with Embark Studios.
+> ArcTimers (also written Arc Timers) is a free, unofficial ARC Raiders event timer and tracker for iPhone and iPad. It shows every Map Condition (Matriarch, Night Raid, Harvester, Electromagnetic Storm and more) on every map with live countdowns, and sends a notification before the events you track. Its maps show the ARC, containers, quests and extraction points on every map. Made by players, not affiliated with Embark Studios.
 
 - App Store: https://apps.apple.com/app/id6758253513
 - Website: https://arctimers.com/ (French: https://arctimers.com/fr/)
@@ -23,6 +23,7 @@ Maps tracked: Dam Battlegrounds, Buried City, Spaceport, The Blue Gate, Stella M
 
 - Timeline: conditions active now with a countdown to their end, what starts next, and what comes later today
 - Events: the schedule grouped by condition, with the next start time and map for each, plus Weekly Trials
+- Maps: every map, with the ARC, containers, quests and extraction points on it; search them and show only the ones you want
 - Tracking: tap the bell on an event to be notified when it starts (up to 5 tracked events for free, unlimited with Pro)
 - Custom alerts (Pro): pick any mix of conditions and maps; get notified 15, 10 or 5 minutes before, or at start
 - Pause all alerts for an hour, until tomorrow morning, or until resumed (Pro)
@@ -30,5 +31,5 @@ Maps tracked: Dam Battlegrounds, Buried City, Spaceport, The Blue Gate, Stella M
 
 ## Pages
 
-- [Home and FAQ](https://arctimers.com/): features, Map Conditions, Free vs Pro, FAQ
+- [Home and FAQ](https://arctimers.com/): features, maps, Map Conditions, Free vs Pro, FAQ
 - [Terms of Use and Privacy Policy](https://arctimers.com/legal/)
