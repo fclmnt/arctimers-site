@@ -258,7 +258,7 @@
                         <source type="image/avif" srcset="assets/img/en-iphone-01-timeline-light.avif" />
                         <img class="iphone" src="assets/img/en-iphone-01-timeline-light.png" width="760" height="1554" alt="ArcTimers on iPhone showing the ARC Raiders events active now with countdowns." fetchpriority="high" />
                     </picture>
-                    <div class="notifs float">
+                    <div class="notifs">
                         <div class="notif">
                             <img src="assets/img/icon.png" alt="" width="38" height="38" />
                             <div class="top"><b>Heads up, Raider</b><span>now</span></div>
@@ -270,7 +270,7 @@
                             <p>Night Raid is now active on Blue Gate. One hour on the clock.</p>
                         </div>
                     </div>
-                    <div class="chip float delay">
+                    <div class="chip">
                         <div class="label">Ends in</div>
                         <div class="name">Matriarch · Spaceport</div>
                         <div class="time" data-countdown="1361" data-minutes="m">22m 41s</div>
@@ -280,7 +280,7 @@
             </div>
         </section>
 
-        <div class="ticker" aria-label="Maps and Map Conditions covered">
+        <div class="ticker" role="region" aria-label="Maps and Map Conditions covered">
             <div class="ticker-track">
                 <span>Dam Battlegrounds</span><span>Matriarch</span><span>Buried City</span><span>Night Raid</span><span>Spaceport</span><span>Harvester</span><span>The Blue Gate</span><span>Electromagnetic Storm</span><span>Stella Montis</span><span>Hurricane</span><span>Riven Tides</span><span>Husk Graveyard</span><span>Pendola Pass</span><span>Lush Blooms</span><span>ARC Frigate</span><span>Redirection</span>
                 <span aria-hidden="true">Dam Battlegrounds</span><span aria-hidden="true">Matriarch</span><span aria-hidden="true">Buried City</span><span aria-hidden="true">Night Raid</span><span aria-hidden="true">Spaceport</span><span aria-hidden="true">Harvester</span><span aria-hidden="true">The Blue Gate</span><span aria-hidden="true">Electromagnetic Storm</span><span aria-hidden="true">Stella Montis</span><span aria-hidden="true">Hurricane</span><span aria-hidden="true">Riven Tides</span><span aria-hidden="true">Husk Graveyard</span><span aria-hidden="true">Pendola Pass</span><span aria-hidden="true">Lush Blooms</span><span aria-hidden="true">ARC Frigate</span><span aria-hidden="true">Redirection</span>
@@ -448,42 +448,6 @@
             </div>
         </section>
 
-        <section class="section" aria-labelledby="devices-title">
-            <div class="wrap">
-                <div class="section-head center reveal">
-                    <span class="kicker"><b>iPhone</b><span class="dash"></span><b>iPad</b></span>
-                    <h2 id="devices-title">Fits the way you play.</h2>
-                    <p>A full schedule on iPad, a quick glance on iPhone. Light or dark, in English or French.</p>
-                </div>
-                <div class="devices reveal">
-                    <figure>
-                        <picture>
-                            <source type="image/avif" media="(prefers-color-scheme: dark)" srcset="assets/img/en-ipad-01-timeline.avif" data-scheme="dark" />
-                            <source type="image/png" media="(prefers-color-scheme: dark)" srcset="assets/img/en-ipad-01-timeline.png" data-scheme="dark" />
-                            <source type="image/avif" srcset="assets/img/en-ipad-01-timeline-light.avif" />
-                            <img src="assets/img/en-ipad-01-timeline-light.png" width="1400" height="1826" loading="lazy" decoding="async" alt="ArcTimers on iPad, the ARC Raiders event schedule, showing four active conditions and the schedule for the hours ahead." />
-                        </picture>
-                        <figcaption>iPad</figcaption>
-                    </figure>
-                    <figure>
-                        <picture>
-                            <source type="image/avif" srcset="assets/img/en-iphone-01-timeline.avif" />
-                            <img src="assets/img/en-iphone-01-timeline.png" width="760" height="1554" loading="lazy" decoding="async" alt="The Timeline on iPhone in dark mode." />
-                        </picture>
-                        <figcaption>Dark</figcaption>
-                    </figure>
-                    <figure>
-                        <picture>
-                            <source type="image/avif" srcset="assets/img/en-iphone-01-timeline-light.avif" />
-                            <img src="assets/img/en-iphone-01-timeline-light.png" width="760" height="1554" loading="lazy" decoding="async" alt="The Timeline on iPhone in light mode." />
-                        </picture>
-                        <figcaption>Light</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-
         <section class="section" id="pro">
             <div class="wrap">
                 <div class="section-head center reveal">
@@ -600,7 +564,7 @@
                 <a href="fr/" hreflang="fr" lang="fr">Français</a>
             </nav>
             <p>ArcTimers is an unofficial fan-made app and is not affiliated with Embark Studios. ARC Raiders is a trademark of Embark Studios AB. Event schedule provided by MetaForge.</p>
-            <p>© 2026 Franck Clement</p>
+            <p>© 2026 ArcTimers</p>
         </div>
     </footer>
     <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "47f411f96e3e4d21b99a27da5f8b28dd"}'></script><!-- End Cloudflare Web Analytics -->

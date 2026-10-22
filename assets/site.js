@@ -31,13 +31,18 @@
             const next = current() === "dark" ? "light" : "dark";
             // Back to following the system when the choice matches it.
             const matchesSystem = next === (systemDark.matches ? "dark" : "light");
-            if (matchesSystem) delete root.dataset.theme;
-            else root.dataset.theme = next;
+            const swap = () => {
+                if (matchesSystem) delete root.dataset.theme;
+                else root.dataset.theme = next;
+                applyTheme();
+            };
+            // Cross-fade instead of flashing the whole page to the other brightness.
+            if (document.startViewTransition && !reduceMotion) document.startViewTransition(swap);
+            else swap();
             try {
                 if (matchesSystem) localStorage.removeItem("theme");
                 else localStorage.setItem("theme", next);
             } catch (e) {}
-            applyTheme();
         });
     }
     systemDark.addEventListener("change", applyTheme);
