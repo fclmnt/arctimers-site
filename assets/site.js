@@ -70,6 +70,38 @@
         revealed.forEach((el) => io.observe(el));
     }
 
+    // FAQ answers slide open and shut. CSS can't animate a <details> to its natural height
+    // in Safari, so the height is animated here, from wherever it is if clicked mid-slide.
+    if (!reduceMotion) {
+        document.querySelectorAll(".faq details").forEach((details) => {
+            const summary = details.querySelector("summary");
+            let opening = details.open;
+            let animation = null;
+            summary.addEventListener("click", (event) => {
+                event.preventDefault();
+                opening = !opening;
+                const start = details.getBoundingClientRect().height;
+                if (animation) animation.cancel();
+                details.classList.remove("closing");
+                details.open = opening;
+                const end = details.getBoundingClientRect().height;
+                details.open = true;
+                details.classList.toggle("closing", !opening);
+                details.style.overflow = "hidden";
+                animation = details.animate(
+                    { height: [`${start}px`, `${end}px`] },
+                    { duration: 300, easing: "cubic-bezier(.2,.7,.2,1)" }
+                );
+                animation.onfinish = () => {
+                    details.open = opening;
+                    details.classList.remove("closing");
+                    details.style.overflow = "";
+                    animation = null;
+                };
+            });
+        });
+    }
+
     // Hero "Ends in" readout: counts down from the time in its data attribute, fills
     // the hour's progress bar, and starts over at zero.
     const time = document.querySelector("[data-countdown]");
